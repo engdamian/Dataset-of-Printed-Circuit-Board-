@@ -3,6 +3,7 @@ Description:  This repository is dedicated to the creation of a collaborative, o
 
 Project Purpose:
 Tantalum capacitors are electronic components containing tantalum, a critical raw material (CRM) of significant value. The precise identification and selective extraction of these capacitors from end-of-life PCBs are fundamental steps for their efficient recycling and for promoting a circular economy in the electronics sector. As highlighted in the TREASURE project, the recovery of such materials is crucial for a more sustainable supply chain. This dataset aims to provide the necessary visual resources to develop computer vision and AI systems that can automate or semi-automate this recognition process.
+
 How to Contribute:
 You are invited to contribute to this dataset by uploading your PCB images. Images clearly showing tantalum capacitors in different contexts (various board types, component densities, lighting conditions, different angles) are particularly valuable. Ideally, images should be:
 
