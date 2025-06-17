@@ -8,12 +8,12 @@ The printed circuit boards (PCBs) were photographed using a high-resolution digi
 
 Each image was captured with a consistent top-down orientation, under uniform lighting conditions to reduce reflections and shadows, which can interfere with visual component recognition and annotation.
 
-# 2. Component Annotation with CVAT
+## 2. Component Annotation with CVAT
 The captured images were uploaded into CVAT (Computer Vision Annotation Tool) for manual annotation.
 
 Using the bounding box tool in CVAT, each tantalum capacitor visible in the images was enclosed in a rectangle. Annotations were conducted manually and consistently across all images, allowing for high accuracy in component labeling and localization.
 
-# 3. Classification Criteria
+## 3. Classification Criteria
 Three specific types of tantalum capacitors were identified and annotated, based on their color and shape:
 
 Orange Rectangular Capacitor
@@ -27,10 +27,10 @@ Characterized by its elliptical shape and orange casing, these are often through
 
 These labels were predefined in CVAT and applied consistently during annotation.
 
-# 4. Exporting Annotations
+## 4. Exporting Annotations
 Once the annotation process was completed, the labeled dataset was exported in CVAT’s XML format (CVAT for images 1.1). This format contains all the necessary metadata about the images, including bounding box coordinates, labels, and image dimensions.
 
-# 5. Processing Annotations via Python
+## 5. Processing Annotations via Python
 A custom Python script was developed to convert the XML annotations into a more accessible format for further processing.
 
 For each image, a corresponding .txt file was generated containing a list of all annotated components with the following fields:
