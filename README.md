@@ -49,7 +49,7 @@ Each image generated its own .txt file named after the original image, e.g., PCB
 # How to Contribute
 You are invited to contribute to this dataset by uploading your PCB images. Images clearly showing tantalum capacitors in different contexts (various board types, component densities, lighting conditions, different angles) are particularly valuable. Ideally, images should be:
 
-- Well-lit and in focus.
+- Well-lit, in focus and at a correct distance (270 mm).
 - Of sufficient resolution to distinguish component details.
-- Accompanied, if possible, by annotations or metadata (e.g., PCB type, confirmed presence of
+- Accompanied, if possible, by annotations or metadata (e.g., Type of
 tantalum capacitors).
