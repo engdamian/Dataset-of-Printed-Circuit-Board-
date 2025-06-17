@@ -37,7 +37,7 @@ For each image, a corresponding .txt file was generated containing a list of all
 
   - x_center, y_center: the center coordinates of the bounding box (in pixels)
   - width, height: dimensions of the bounding box
-  - rotation: set to 0.0 (as CVAT does not store rotation by default)
+  - rotation: set to 0.0 
   - label: the assigned class name of the capacitor
 
 The output was structured to match the requirements of downstream tools such as WPCB-EFA and can be easily adapted for training object detection models (e.g., YOLO) or used in area-based component estimation workflows.
