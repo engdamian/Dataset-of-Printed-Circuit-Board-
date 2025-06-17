@@ -33,18 +33,12 @@ Once the annotation process was completed, the labeled dataset was exported in C
 ## 5. Processing Annotations via Python
 A custom Python script was developed to convert the XML annotations into a more accessible format for further processing.
 
-For each image, a corresponding .txt file was generated containing a list of all annotated components with the following fields:
+For each image, a corresponding ##.txt file was generated containing a list of all annotated components with the following fields:
 
-css
-Copy code
-x_center y_center width height rotation label
-x_center, y_center: the center coordinates of the bounding box (in pixels)
-
-width, height: dimensions of the bounding box
-
-rotation: set to 0.0 (as CVAT does not store rotation by default)
-
-label: the assigned class name of the capacitor
+  - x_center, y_center: the center coordinates of the bounding box (in pixels)
+  - width, height: dimensions of the bounding box
+  - rotation: set to 0.0 (as CVAT does not store rotation by default)
+  - label: the assigned class name of the capacitor
 
 The output was structured to match the requirements of downstream tools such as WPCB-EFA and can be easily adapted for training object detection models (e.g., YOLO) or used in area-based component estimation workflows.
 
