@@ -50,6 +50,7 @@ The output was structured to match the requirements of downstream tools such as 
 
 Each image generated its own .txt file named after the original image, e.g., PCB1_REC1.txt.
 
+![image](https://github.com/user-attachments/assets/9c6b6fca-2e62-472d-967d-632ec790e8e9)
 
 # How to Contribute
 You are invited to contribute to this dataset by uploading your PCB images. Images clearly showing tantalum capacitors in different contexts (various board types, component densities, lighting conditions, different angles) are particularly valuable. Ideally, images should be:
