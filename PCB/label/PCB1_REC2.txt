@@ -1,0 +1,15 @@
+3481.90 3781.18 93.46 57.95 0.0 black rectangular capacitor
+3273.94 3866.22 92.53 26.17 0.0 black rectangular capacitor
+4085.90 3957.49 89.66 51.44 0.0 black rectangular capacitor
+4223.63 3903.20 101.26 171.35 0.0 orange rectangular capacitor
+4545.83 3336.66 133.72 73.62 0.0 black rectangular capacitor
+3836.55 3193.31 89.25 54.54 0.0 black rectangular capacitor
+3968.34 3076.43 84.78 48.00 0.0 black rectangular capacitor
+3947.18 2902.68 89.99 55.21 0.0 black rectangular capacitor
+3946.53 2829.62 87.05 47.42 0.0 black rectangular capacitor
+3780.22 2828.72 89.86 53.05 0.0 black rectangular capacitor
+3616.07 2825.17 90.29 54.72 0.0 black rectangular capacitor
+3449.94 2826.11 90.00 55.59 0.0 black rectangular capacitor
+3278.60 2874.65 54.74 88.08 0.0 black rectangular capacitor
+3235.66 3054.66 55.57 87.72 0.0 black rectangular capacitor
+3159.31 3054.63 56.73 86.60 0.0 black rectangular capacitor
