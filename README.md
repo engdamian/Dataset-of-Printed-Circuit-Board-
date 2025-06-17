@@ -3,7 +3,7 @@ This repository is dedicated to the creation of a collaborative, open-source ima
 
 # Project Purpose
 Tantalum capacitors are electronic components containing tantalum, a critical raw material (CRM) of significant value. The precise identification and selective extraction of these capacitors from end-of-life PCBs are fundamental steps for their efficient recycling and for promoting a circular economy in the electronics sector. As highlighted in the TREASURE project, the recovery of such materials is crucial for a more sustainable supply chain. This dataset aims to provide the necessary visual resources to develop computer vision and AI systems that can automate or semi-automate this recognition process.
-# 1. Image Acquisition
+## 1. Image Acquisition
 The printed circuit boards (PCBs) were photographed using a high-resolution digital camera positioned at a fixed height of 270 millimeters above the PCB surface. This setup was chosen to optimize the pixel resolution across the entire board, especially in the case of larger PCBs, allowing for clear visibility of fine details on surface-mounted components.
 
 Each image was captured with a consistent top-down orientation, under uniform lighting conditions to reduce reflections and shadows, which can interfere with visual component recognition and annotation.
