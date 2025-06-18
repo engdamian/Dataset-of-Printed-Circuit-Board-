@@ -1,1 +1,1 @@
-This folder contains YOLO label files
+This folder contains normalized YOLO label files
