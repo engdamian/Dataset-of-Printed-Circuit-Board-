@@ -29,11 +29,11 @@ These labels were predefined in CVAT and applied consistently during annotation.
 
 ## 4. Annotation Structure
 Each annotation file is associated with a single image and contains one row per labeled object. The data is structured as follows:
-                           <class_id> <x_center> <y_center> <width> <height>
+### <class_id> <x_center> <y_center> <width> <height>
 Where:
-  •	class_id --> numeric identifier of the object class.
-  •	x_center and y_center --> normalized coordinates of the bounding box center, relative to the image width and height.
-  •	width and height indicate the normalized dimensions of the bounding box.
+  - class_id --> numeric identifier of the object class.
+  - x_center and y_center --> normalized coordinates of the bounding box center, relative to the image width and height.
+  - width and height indicate the normalized dimensions of the bounding box.
   
 All coordinate values are normalized within the range [0, 1], thereby ensuring the annotations remain resolution-independent and compatible with multi-scale training processes.
 
@@ -41,9 +41,9 @@ All coordinate values are normalized within the range [0, 1], thereby ensuring t
 
 The dataset encompasses three capacitor categories, each corresponding to a distinct class ID. The mapping between numerical identifiers and semantic class labels is defined as follows:
 Class ID	Object Class Description:
-  0 -->	Orange rectangular capacitor
-  1	--> Black rectangular capacitor
-  2	--> Orange ellipsoidal capacitor
+  - 0 -->	Orange rectangular capacitor
+  - 1	--> Black rectangular capacitor
+  - 2	--> Orange ellipsoidal capacitor
 This mapping is explicitly declared in the accompanying data.yaml file, which is used by YOLO-based training pipelines to resolve class identifiers into human-readable class names during both training and inference.
 
 
