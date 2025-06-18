@@ -1,4 +1,4 @@
- reads the CVAT XML export and produces one .txt file per image with the following format: x_center y_center width height rotation label
+# reads the CVAT XML export and produces one .txt file per image with the following format: x_center y_center width height rotation label
 
 import xml.etree.ElementTree as ET
 import os
