@@ -31,12 +31,13 @@ These labels were predefined in CVAT and applied consistently during annotation.
 Each annotation file is associated with a single image and contains one row per labeled object. The data is structured as follows:
                            <class_id> <x_center> <y_center> <width> <height>
 Where:
-  •	class_id denotes the numeric identifier of the object class.
-  •	x_center and y_center represent the normalized coordinates of the bounding box center, relative to the       image width and height.
+  •	class_id --> numeric identifier of the object class.
+  •	x_center and y_center --> normalized coordinates of the bounding box center, relative to the image width and height.
   •	width and height indicate the normalized dimensions of the bounding box.
   
 All coordinate values are normalized within the range [0, 1], thereby ensuring the annotations remain resolution-independent and compatible with multi-scale training processes.
-Class Mapping
+
+## Class Mapping
 
 The dataset encompasses three capacitor categories, each corresponding to a distinct class ID. The mapping between numerical identifiers and semantic class labels is defined as follows:
 Class ID	Object Class Description:
