@@ -44,6 +44,7 @@ Class ID	Object Class Description:
   - 0 -->	Orange rectangular capacitor
   - 1	--> Black rectangular capacitor
   - 2	--> Orange ellipsoidal capacitor
+
 This mapping is explicitly declared in the accompanying data.yaml file, which is used by YOLO-based training pipelines to resolve class identifiers into human-readable class names during both training and inference.
 
 
