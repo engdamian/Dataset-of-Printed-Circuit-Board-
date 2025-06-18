@@ -1,46 +1,34 @@
-# reads the CVAT XML export and produces one .txt file per image with the following format: x_center y_center width height rotation label
+# This Python script is designed to extract a ZIP file that contains YOLO annotation files, and then create new .txt files with the same annotation content in a separate folder.
+# It performs three main actions:
+#   - Unzips the dataset into a working directory.
+#   - Finds all YOLO annotation files (the .txt files that describe bounding boxes).
+#   - Copies their content into new .txt files with the same names, saved in a clean output folder.
+# The result is a set of readable annotation files, ready for further use or processing, without modifying the original data.
 
-import xml.etree.ElementTree as ET
+
+import zipfile
 import os
 
-# Path to your CVAT XML export
-xml_file_path = "annotations.xml"  # Change this to your XML file path
+# === CONFIGURATION ===
+zip_file_path = 'PCB_annotaions_1_YOLO_detection.zip'  # Your input YOLO zip file
+extraction_path = 'extracted_yolo_annotations'
+output_path = 'converted_txt_annotations'
 
-# Parse the XML
-tree = ET.parse(xml_file_path)
-root = tree.getroot()
+# === STEP 1: Extract the ZIP ===
+os.makedirs(extraction_path, exist_ok=True)
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extraction_path)
 
-# Dictionary to hold annotations by image
-annotations_by_image = {}
+# === STEP 2: Read and copy YOLO annotations ===
+os.makedirs(output_path, exist_ok=True)
+for root, dirs, files in os.walk(extraction_path):
+    for file in files:
+        if file.endswith('.txt'):
+            input_file_path = os.path.join(root, file)
+            output_file_path = os.path.join(output_path, file)
 
-# Iterate over each image
-for image in root.findall("image"):
-    image_name = image.attrib["name"]
-    boxes = []
-    for box in image.findall("box"):
-        label = box.attrib["label"]
-        xtl = float(box.attrib["xtl"])
-        ytl = float(box.attrib["ytl"])
-        xbr = float(box.attrib["xbr"])
-        ybr = float(box.attrib["ybr"])
-        
-        x_center = (xtl + xbr) / 2
-        y_center = (ytl + ybr) / 2
-        width = xbr - xtl
-        height = ybr - ytl
-        rotation = 0.0  # Rotation is assumed 0 unless annotated separately
+            with open(input_file_path, 'r') as infile, open(output_file_path, 'w') as outfile:
+                for line in infile:
+                    outfile.write(line.strip() + '\n')
 
-        line = f"{x_center:.2f} {y_center:.2f} {width:.2f} {height:.2f} {rotation:.1f} {label}"
-        boxes.append(line)
-
-    annotations_by_image[image_name] = boxes
-
-# Write one .txt file per image
-for image_name, lines in annotations_by_image.items():
-    base_name = os.path.splitext(image_name)[0]
-    output_file = f"{base_name}.txt"
-    with open(output_file, "w") as f:
-        for line in lines:
-            f.write(line + "\n")
-
-print("Annotation files created successfully.")
+print(f"✅ Done! Extracted and copied annotation files to '{output_path}'")
