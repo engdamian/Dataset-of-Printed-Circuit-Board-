@@ -1,4 +1,0 @@
-4846.70 2346.93 91.95 107.02 0.0 orange rectangular capacitor
-3564.61 3325.30 80.03 75.77 0.0 orange rectangular capacitor
-4958.22 3538.14 94.72 77.33 0.0 orange rectangular capacitor
-5064.20 3662.52 116.22 81.28 0.0 orange rectangular capacitor

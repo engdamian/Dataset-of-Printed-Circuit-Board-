@@ -1,3 +1,0 @@
-3292.76 3796.43 91.95 91.95 0.0 black rectangular capacitor
-3349.28 3925.96 89.24 88.16 0.0 black rectangular capacitor
-3127.78 3876.74 239.07 140.09 0.0 orange ellipsoidal capacitor

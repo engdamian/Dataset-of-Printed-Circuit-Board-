@@ -1,7 +1,0 @@
-3890.11 1977.76 147.20 151.10 0.0 orange ellipsoidal capacitor
-2711.70 4098.47 110.34 102.23 0.0 orange ellipsoidal capacitor
-2701.78 4564.52 91.04 101.42 0.0 orange ellipsoidal capacitor
-3138.06 4462.20 92.40 75.12 0.0 orange ellipsoidal capacitor
-3139.76 4076.07 121.69 88.16 0.0 orange ellipsoidal capacitor
-5003.08 4138.00 84.38 95.74 0.0 orange ellipsoidal capacitor
-4974.40 4551.74 84.37 125.27 0.0 orange ellipsoidal capacitor
