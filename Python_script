@@ -1,0 +1,46 @@
+
+
+import xml.etree.ElementTree as ET
+import os
+
+# Path to your CVAT XML export
+xml_file_path = "annotations.xml"  # Change this to your XML file path
+
+# Parse the XML
+tree = ET.parse(xml_file_path)
+root = tree.getroot()
+
+# Dictionary to hold annotations by image
+annotations_by_image = {}
+
+# Iterate over each image
+for image in root.findall("image"):
+    image_name = image.attrib["name"]
+    boxes = []
+    for box in image.findall("box"):
+        label = box.attrib["label"]
+        xtl = float(box.attrib["xtl"])
+        ytl = float(box.attrib["ytl"])
+        xbr = float(box.attrib["xbr"])
+        ybr = float(box.attrib["ybr"])
+        
+        x_center = (xtl + xbr) / 2
+        y_center = (ytl + ybr) / 2
+        width = xbr - xtl
+        height = ybr - ytl
+        rotation = 0.0  # Rotation is assumed 0 unless annotated separately
+
+        line = f"{x_center:.2f} {y_center:.2f} {width:.2f} {height:.2f} {rotation:.1f} {label}"
+        boxes.append(line)
+
+    annotations_by_image[image_name] = boxes
+
+# Write one .txt file per image
+for image_name, lines in annotations_by_image.items():
+    base_name = os.path.splitext(image_name)[0]
+    output_file = f"{base_name}.txt"
+    with open(output_file, "w") as f:
+        for line in lines:
+            f.write(line + "\n")
+
+print("Annotation files created successfully.")
