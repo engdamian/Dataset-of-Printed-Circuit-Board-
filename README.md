@@ -16,14 +16,14 @@ Using the bounding box tool in CVAT, each tantalum capacitor visible in the imag
 ## 3. Classification Criteria
 Three specific types of tantalum capacitors were identified and annotated, based on their color and shape:
 
-Orange Rectangular Capacitor
-Usually surface-mounted and easily distinguishable by its blocky, rectangular shape and bright orange color.
+  - Orange Rectangular Capacitor:
+    Usually surface-mounted and easily distinguishable by its blocky, rectangular shape and bright orange color.
 
-Black Rectangular Capacitor
-Also surface-mounted, typically darker in color, but similar in shape to the orange rectangular type.
+  - Black Rectangular Capacitor:
+    Also surface-mounted, typically darker in color, but similar in shape to the orange rectangular type.
 
-Orange Ellipsoidal Capacitor
-Characterized by its elliptical shape and orange casing, these are often through-hole components.
+  - Orange Ellipsoidal Capacitor:
+    Characterized by its elliptical shape and orange casing, these are often through-hole components.
 
 These labels were predefined in CVAT and applied consistently during annotation.
 
