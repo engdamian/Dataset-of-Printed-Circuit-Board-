@@ -27,22 +27,24 @@ Three specific types of tantalum capacitors were identified and annotated, based
 
 These labels were predefined in CVAT and applied consistently during annotation.
 
-## 4. Exporting Annotations
-Once the annotation process was completed, the labeled dataset was exported in CVAT’s XML format (CVAT for images 1.1). This format contains all the necessary metadata about the images, including bounding box coordinates, labels, and image dimensions.
+## 4. Annotation Structure
+Each annotation file is associated with a single image and contains one row per labeled object. The data is structured as follows:
+                           <class_id> <x_center> <y_center> <width> <height>
+Where:
+  •	class_id denotes the numeric identifier of the object class.
+  •	x_center and y_center represent the normalized coordinates of the bounding box center, relative to the       image width and height.
+  •	width and height indicate the normalized dimensions of the bounding box.
+  
+All coordinate values are normalized within the range [0, 1], thereby ensuring the annotations remain resolution-independent and compatible with multi-scale training processes.
+Class Mapping
 
-## 5. Processing Annotations via Python
-A custom Python script was developed to convert the XML annotations into a more accessible format for further processing.
+The dataset encompasses three capacitor categories, each corresponding to a distinct class ID. The mapping between numerical identifiers and semantic class labels is defined as follows:
+Class ID	Object Class Description:
+  0 -->	Orange rectangular capacitor
+  1	--> Black rectangular capacitor
+  2	--> Orange ellipsoidal capacitor
+This mapping is explicitly declared in the accompanying data.yaml file, which is used by YOLO-based training pipelines to resolve class identifiers into human-readable class names during both training and inference.
 
-For each image, a corresponding .txt file was generated containing a list of all annotated components with the following fields:
-
-  - x_center, y_center: the center coordinates of the bounding box (in pixels)
-  - width, height: dimensions of the bounding box
-  - rotation: set to 0.0 
-  - label: the assigned class name of the capacitor
-
-The output was structured to match the requirements of downstream tools such as WPCB-EFA and can be easily adapted for training object detection models (e.g., YOLO) or used in area-based component estimation workflows.
-
-Each image generated its own .txt file named after the original image, e.g., PCB1_REC1.txt.
 
 ![image](https://github.com/user-attachments/assets/9c6b6fca-2e62-472d-967d-632ec790e8e9)
 
