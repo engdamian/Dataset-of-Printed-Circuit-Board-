@@ -48,7 +48,7 @@ Class ID	Object Class Description:
 This mapping is explicitly declared in the accompanying data.yaml file, which is used by YOLO-based training pipelines to resolve class identifiers into human-readable class names during both training and inference.
 
 
-![image](https://github.com/user-attachments/assets/9c6b6fca-2e62-472d-967d-632ec790e8e9)
+![image](https://github.com/user-attachments/assets/45854c7b-55aa-4ca8-9c6f-d4e5804b7d36)
 
 # How to Contribute
 You are invited to contribute to this dataset by uploading your PCB images. Images clearly showing tantalum capacitors in different contexts (various board types, component densities, lighting conditions, different angles) are particularly valuable. Ideally, images should be:
